@@ -160,7 +160,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.DefaultCompany.Nothing-Can-Go-Wrong-In-A-Dream
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -378,7 +379,7 @@ PlayerSettings:
       m_SubKind: 
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
-    m_StaticBatching: 1
+    m_StaticBatching: 0
     m_DynamicBatching: 0
   - m_BuildTarget: tvOS
     m_StaticBatching: 1
@@ -844,7 +845,7 @@ PlayerSettings:
   cloudProjectId: 4726b47e-97df-4e92-92da-9f1e0d86955e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: Nothing Can Go Wrong In A Dream
   organizationId: sjt23vyas
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
