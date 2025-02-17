@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 
     Rigidbody2D playerRb;
     BoxCollider2D playerFeetCollider;
+    AudioSource jumpSource;
     Animator playerAnim;
     Vector2 moveInput;
 
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
         playerFeetCollider = GetComponent<BoxCollider2D>();
+        jumpSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -58,6 +60,7 @@ public class Player : MonoBehaviour
         if (value.isPressed)
         {
             playerRb.velocity += new Vector2(0f, jumpSpeed);
+            jumpSource.Play();
         }
     }
 
