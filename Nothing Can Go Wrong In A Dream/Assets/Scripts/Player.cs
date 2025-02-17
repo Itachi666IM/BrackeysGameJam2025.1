@@ -8,12 +8,14 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] float jumpSpeed;
     Rigidbody2D playerRb;
+    Animator playerAnim;
     Vector2 moveInput;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        playerAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,11 @@ public class Player : MonoBehaviour
     {
         Vector2 playerVelocity = new Vector2(moveInput.x * moveSpeed, playerRb.velocity.y);
         playerRb.velocity = playerVelocity;
+
+        bool playerHasHorizontalVelocity = Mathf.Abs(playerRb.velocity.x) > Mathf.Epsilon;
+
+        playerAnim.SetBool("isRunning", playerHasHorizontalVelocity);
+        
     }
 
     void OnJump(InputValue value)
