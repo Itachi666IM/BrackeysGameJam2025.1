@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     Animator playerAnim;
     Vector2 moveInput;
 
+    public bool canMove = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +32,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Run();
-        FlipSprite();
-        Respawn();
+        if(canMove)
+        {
+            Run();
+            FlipSprite();
+            Respawn();
+        }
     }
 
     void OnMove(InputValue input)

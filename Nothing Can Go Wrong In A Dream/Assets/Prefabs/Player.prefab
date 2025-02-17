@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5270599266129372163}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,6 +170,7 @@ MonoBehaviour:
   isHeaven: 0
   minY: -5
   maxY: 5
+  canMove: 1
 --- !u!114 &591010833284008270
 MonoBehaviour:
   m_ObjectHideFlags: 0
