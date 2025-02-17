@@ -7,15 +7,22 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
     [SerializeField] float jumpSpeed;
+    [SerializeField] bool isHeaven;
+    [SerializeField] float minY;
+    [SerializeField] float maxY;
+
     Rigidbody2D playerRb;
+    BoxCollider2D playerFeetCollider;
     Animator playerAnim;
     Vector2 moveInput;
+
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
+        playerFeetCollider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -23,6 +30,7 @@ public class Player : MonoBehaviour
     {
         Run();
         FlipSprite();
+        Respawn();
     }
 
     void OnMove(InputValue input)
@@ -38,11 +46,15 @@ public class Player : MonoBehaviour
         bool playerHasHorizontalVelocity = Mathf.Abs(playerRb.velocity.x) > Mathf.Epsilon;
 
         playerAnim.SetBool("isRunning", playerHasHorizontalVelocity);
-        
+
     }
 
     void OnJump(InputValue value)
     {
+        if (!playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            return;
+        }
         if (value.isPressed)
         {
             playerRb.velocity += new Vector2(0f, jumpSpeed);
@@ -57,6 +69,22 @@ public class Player : MonoBehaviour
         {
 
             transform.localScale = new Vector2(Mathf.Sign(playerRb.velocity.x), 1f);
+        }
+
+    }
+
+    void Respawn()
+    {
+        if (!isHeaven) 
+        { 
+            return; 
+        }
+        else
+        {
+            if(playerRb.transform.position.y < minY)
+            {
+                playerRb.transform.position = new Vector2(playerRb.transform.position.x, maxY);
+            }
         }
 
     }
