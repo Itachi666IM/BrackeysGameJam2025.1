@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     [SerializeField] float attackDamage;
     [SerializeField] Transform attackPoint;
     [SerializeField] LayerMask enemyLayer;
+    [SerializeField] ParticleSystem slashEffect;
+    [SerializeField] float slashDuration;
     float nextAttackTime;
 
     Rigidbody2D playerRb;
@@ -128,6 +130,7 @@ public class Player : MonoBehaviour
             return;
         }
         playerAnim.SetTrigger("Attack");
+        StartCoroutine(SlashEffectManager());
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
@@ -135,6 +138,14 @@ public class Player : MonoBehaviour
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
+        
+    }
+
+    IEnumerator SlashEffectManager()
+    {
+        slashEffect.Play();
+        yield return new WaitForSeconds(slashDuration);
+        slashEffect.Stop();
     }
 
     private void OnDrawGizmosSelected()
