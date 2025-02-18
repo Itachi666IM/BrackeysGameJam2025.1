@@ -25189,101 +25189,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
+    - target: {fileID: 5298647183414289887, guid: 9c9c043b4ac85b244a1edfc9990a2547,
         type: 3}
-      propertyPath: lengthInSec
-      value: 0.1
+      propertyPath: m_LocalPosition.x
+      value: 0.373
       objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
+    - target: {fileID: 5298647183414289887, guid: 9c9c043b4ac85b244a1edfc9990a2547,
         type: 3}
-      propertyPath: ShapeModule.type
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: EmissionModule.m_BurstCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: EmissionModule.m_Bursts.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.minScalar
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: TrailModule.colorOverTrail.maxColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: TrailModule.colorOverTrail.maxColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: TrailModule.colorOverTrail.maxColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: TrailModule.colorOverLifetime.maxColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: TrailModule.colorOverLifetime.maxColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: TrailModule.colorOverLifetime.maxColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3574184272325215549, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5515382864390674225, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: m_RenderMode
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5515382864390674225, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 47526374f63a38e4c9fc8b801ef6d60c, type: 2}
     - target: {fileID: 6915884693492890570, guid: 9c9c043b4ac85b244a1edfc9990a2547,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25397,50 +25312,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2562246392968373971, guid: c51b2412e80859642a0d2963b1dfc572,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 2.0266995
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562246392968373971, guid: c51b2412e80859642a0d2963b1dfc572,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.7429128
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562246392968373971, guid: c51b2412e80859642a0d2963b1dfc572,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.1140162
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562246392968373971, guid: c51b2412e80859642a0d2963b1dfc572,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.051328413
-      objectReference: {fileID: 0}
     - target: {fileID: 5003426696672012683, guid: c51b2412e80859642a0d2963b1dfc572,
         type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7479813254823018962, guid: c51b2412e80859642a0d2963b1dfc572,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.1471715
-      objectReference: {fileID: 0}
-    - target: {fileID: 7479813254823018962, guid: c51b2412e80859642a0d2963b1dfc572,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.4046245
-      objectReference: {fileID: 0}
-    - target: {fileID: 7479813254823018962, guid: c51b2412e80859642a0d2963b1dfc572,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -1.3129365
-      objectReference: {fileID: 0}
-    - target: {fileID: 7479813254823018962, guid: c51b2412e80859642a0d2963b1dfc572,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.9326246
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
