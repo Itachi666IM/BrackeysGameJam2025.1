@@ -9,8 +9,10 @@ public class MenuManager : MonoBehaviour
     public GameObject buttons;
     public TMP_Text title;
     public GameObject cutScene;
+    public GameObject menuCam;
     public void Play()
     {
+        menuCam.SetActive(false);
         buttons.SetActive(false);
         title.gameObject.SetActive(false);
         cutScene.SetActive(true);
