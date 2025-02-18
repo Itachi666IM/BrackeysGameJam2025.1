@@ -182,6 +182,7 @@ MonoBehaviour:
   slashEffect: {fileID: 3574184272325215549}
   slashDuration: 0.1
   canMove: 1
+  isAlive: 1
 --- !u!114 &591010833284008270
 MonoBehaviour:
   m_ObjectHideFlags: 0

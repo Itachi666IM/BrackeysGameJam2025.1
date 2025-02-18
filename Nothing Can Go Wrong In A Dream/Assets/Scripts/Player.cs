@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -28,9 +29,10 @@ public class Player : MonoBehaviour
     AudioSource jumpSource;
     Animator playerAnim;
     Vector2 moveInput;
+    PlayerHealth playerHealth;
 
     public bool canMove = true;
-    private bool isAlive = true;
+    public bool isAlive = true;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,7 @@ public class Player : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         playerFeetCollider = GetComponent<BoxCollider2D>();
         jumpSource = GetComponent<AudioSource>();
+        playerHealth = FindObjectOfType<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -46,14 +49,18 @@ public class Player : MonoBehaviour
     {
         if(canMove)
         {
-            if (!isAlive)
+            if(!isAlive)
             {
                 return;
             }
             Run();
             FlipSprite();
             Respawn();
-            Die();
+            TakeDamage();
+            if(playerHealth.health<=0)
+            {
+                playerAnim.SetTrigger("Dying");
+            }
         }
     }
 
@@ -159,13 +166,23 @@ public class Player : MonoBehaviour
         
     }
 
-    void Die()
+    public void NotAlive()
+    {
+        isAlive = false;
+    }
+
+    void TakeDamage()
     {
         if (playerRb.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
         {
-            playerAnim.SetTrigger("Dying");
-            isAlive = false;
+            playerHealth.TakeDamage(1);
         }
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        playerHealth.health = 5;
     }
    
 
