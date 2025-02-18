@@ -1,15 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    [Header("Player Movement")]
     [SerializeField] float moveSpeed;
     [SerializeField] float jumpSpeed;
     [SerializeField] bool isHeaven;
     [SerializeField] float minY;
     [SerializeField] float maxY;
+
+    [Header("Player Attack")]
+    [SerializeField] float attackRange;
+    [SerializeField] float timeBetweenAttacks;
+    [SerializeField] float attackDamage;
+    [SerializeField] Transform attackPoint;
+    [SerializeField] LayerMask enemyLayer;
+    float nextAttackTime;
 
     Rigidbody2D playerRb;
     BoxCollider2D playerFeetCollider;
@@ -18,7 +28,6 @@ public class Player : MonoBehaviour
     Vector2 moveInput;
 
     public bool canMove = true;
-
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +75,7 @@ public class Player : MonoBehaviour
         {
             playerRb.velocity += new Vector2(0f, jumpSpeed);
             jumpSource.Play();
+            //playerAnim.SetTrigger("JumpTrigger");
         }
     }
 
@@ -95,5 +105,40 @@ public class Player : MonoBehaviour
             }
         }
 
+    }
+
+    void OnFire(InputValue value)
+    {
+
+        if (value.isPressed)
+        {
+            if (Time.time > nextAttackTime)
+            {
+                Attack();
+                nextAttackTime = Time.time + timeBetweenAttacks;
+            }
+        }
+
+    }
+
+    void Attack()
+    {
+        if (isHeaven)
+        {
+            return;
+        }
+        playerAnim.SetTrigger("Attack");
+
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
+
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Handles.DrawWireDisc(attackPoint.position, Vector3.forward, attackRange);
     }
 }

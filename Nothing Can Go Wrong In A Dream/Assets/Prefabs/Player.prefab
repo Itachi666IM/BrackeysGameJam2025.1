@@ -36,7 +36,8 @@ Transform:
   m_LocalPosition: {x: -6.511, y: -0.522, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5298647183414289887}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2625440597213569702
@@ -77,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2045121665
-  m_SortingLayer: 2
+  m_SortingLayerID: 313047863
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8d6f7fe1dcebf9742b7d5d31f75b8cec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -170,6 +171,13 @@ MonoBehaviour:
   isHeaven: 0
   minY: -5
   maxY: 5
+  attackRange: 1
+  timeBetweenAttacks: 0.5
+  attackDamage: 50
+  attackPoint: {fileID: 5298647183414289887}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
   canMove: 1
 --- !u!114 &591010833284008270
 MonoBehaviour:
@@ -364,3 +372,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &2452430914634485658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5298647183414289887}
+  m_Layer: 7
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5298647183414289887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2452430914634485658}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.309, y: -0.135, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6915884693492890570}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
