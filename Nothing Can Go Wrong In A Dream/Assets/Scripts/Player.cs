@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     Vector2 moveInput;
 
     public bool canMove = true;
+    private bool isAlive = true;
 
     // Start is called before the first frame update
     void Start()
@@ -45,14 +46,23 @@ public class Player : MonoBehaviour
     {
         if(canMove)
         {
+            if (!isAlive)
+            {
+                return;
+            }
             Run();
             FlipSprite();
             Respawn();
+            Die();
         }
     }
 
     void OnMove(InputValue input)
     {
+        if (!isAlive)
+        {
+            return;
+        }
         moveInput = input.Get<Vector2>();
     }
 
@@ -69,6 +79,10 @@ public class Player : MonoBehaviour
 
     void OnJump(InputValue value)
     {
+        if (!isAlive)
+        {
+            return;
+        }
         if (!playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             return;
@@ -111,6 +125,10 @@ public class Player : MonoBehaviour
 
     void OnFire(InputValue value)
     {
+        if (!isAlive)
+        {
+            return;
+        }
 
         if (value.isPressed)
         {
@@ -140,6 +158,16 @@ public class Player : MonoBehaviour
         }
         
     }
+
+    void Die()
+    {
+        if (playerRb.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
+        {
+            playerAnim.SetTrigger("Dying");
+            isAlive = false;
+        }
+    }
+   
 
     IEnumerator SlashEffectManager()
     {
