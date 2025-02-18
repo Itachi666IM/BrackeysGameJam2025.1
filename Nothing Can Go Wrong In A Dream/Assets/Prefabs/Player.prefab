@@ -173,7 +173,7 @@ MonoBehaviour:
   maxY: 5
   attackRange: 1
   timeBetweenAttacks: 0.5
-  attackDamage: 20
+  attackDamage: 50
   attackPoint: {fileID: 5298647183414289887}
   enemyLayer:
     serializedVersion: 2
