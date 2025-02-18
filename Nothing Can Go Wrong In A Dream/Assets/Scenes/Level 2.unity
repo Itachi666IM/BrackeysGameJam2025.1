@@ -10889,6 +10889,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2005308123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2005308124}
+  m_Layer: 7
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2005308124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005308123}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.309, y: -0.135, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1765345625}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2033622955
 GameObject:
   m_ObjectHideFlags: 0
@@ -11337,6 +11368,31 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 313047863
       objectReference: {fileID: 0}
+    - target: {fileID: 5156193255728360669, guid: 9c9c043b4ac85b244a1edfc9990a2547,
+        type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 2005308124}
+    - target: {fileID: 5156193255728360669, guid: 9c9c043b4ac85b244a1edfc9990a2547,
+        type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5156193255728360669, guid: 9c9c043b4ac85b244a1edfc9990a2547,
+        type: 3}
+      propertyPath: attackDamage
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5156193255728360669, guid: 9c9c043b4ac85b244a1edfc9990a2547,
+        type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5156193255728360669, guid: 9c9c043b4ac85b244a1edfc9990a2547,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6915884693492890570, guid: 9c9c043b4ac85b244a1edfc9990a2547,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11389,7 +11445,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6915884693492890570, guid: 9c9c043b4ac85b244a1edfc9990a2547,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2005308124}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c9c043b4ac85b244a1edfc9990a2547, type: 3}
 --- !u!1001 &8788007279334315385
@@ -11400,6 +11460,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1270555012945447546, guid: c51b2412e80859642a0d2963b1dfc572,
+        type: 3}
+      propertyPath: moveSpeed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270555012945447546, guid: c51b2412e80859642a0d2963b1dfc572,
+        type: 3}
+      propertyPath: enemyHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279474060295699132, guid: c51b2412e80859642a0d2963b1dfc572,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1279474060295699132, guid: c51b2412e80859642a0d2963b1dfc572,
         type: 3}
       propertyPath: m_LocalPosition.x
