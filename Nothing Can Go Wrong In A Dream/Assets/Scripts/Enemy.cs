@@ -7,9 +7,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] float enemyHealth;
     Rigidbody2D enemyRb;
+    Animator enemyAnim;
     void Start()
     {
         enemyRb = GetComponent<Rigidbody2D>();
+        enemyAnim = GetComponent<Animator>();
     }
     void Update()
     {
@@ -30,7 +32,11 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         enemyHealth -= damageAmount;
-        if(enemyHealth <= 0)
+        if(enemyHealth > 0)
+        {
+            enemyAnim.SetTrigger("Hit");
+        }
+        else
         {
             Destroy(gameObject);
         }
