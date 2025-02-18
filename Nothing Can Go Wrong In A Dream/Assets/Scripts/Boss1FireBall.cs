@@ -6,6 +6,7 @@ public class Boss1FireBall : MonoBehaviour
 {
     public float speed;
     Player player;
+    public int damageAmount;
 
     private void Start()
     {
@@ -14,5 +15,15 @@ public class Boss1FireBall : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+            playerHealth.health -= damageAmount;
+            Destroy(gameObject);
+        }
     }
 }
