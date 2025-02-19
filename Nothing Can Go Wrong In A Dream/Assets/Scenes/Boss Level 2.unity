@@ -10285,7 +10285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea248e1e3f99010469b1b4e6baeaf112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossHealth: 0
+  bossHealth: 1000
   healthSlider: {fileID: 1488933302}
 --- !u!1 &1022739298
 GameObject:
@@ -12291,16 +12291,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5298647183414289887, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.373
-      objectReference: {fileID: 0}
-    - target: {fileID: 5298647183414289887, guid: 9c9c043b4ac85b244a1edfc9990a2547,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6915884693492890570, guid: 9c9c043b4ac85b244a1edfc9990a2547,
         type: 3}
