@@ -40,5 +40,9 @@ public class PlayerHealth : MonoBehaviour
         {
             healthText.gameObject.SetActive(false);
         }
+        else
+        {
+            healthText.gameObject.SetActive(true);
+        }
     }
 }

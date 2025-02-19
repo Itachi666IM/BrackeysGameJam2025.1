@@ -8,14 +8,25 @@ public class Enemy : MonoBehaviour
     [SerializeField] float enemyHealth;
     Rigidbody2D enemyRb;
     Animator enemyAnim;
+    
     void Start()
     {
         enemyRb = GetComponent<Rigidbody2D>();
         enemyAnim = GetComponent<Animator>();
+        
     }
     void Update()
     {
         enemyRb.velocity = new Vector2(moveSpeed, 0f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+            playerHealth.TakeDamage(1);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

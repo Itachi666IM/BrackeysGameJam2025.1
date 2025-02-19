@@ -287,10 +287,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.9924528, g: 0.24267904, b: 0.035578355, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.46303585, b: 0.3226415, a: 1}
-    m_PressedColor: {r: 0.6301887, g: 0.15100746, b: 0.17458388, a: 1}
-    m_SelectedColor: {r: 0.93962264, g: 0.35707027, b: 0.30316126, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.7584905, g: 0.7584905, b: 0.7584905, a: 1}
+    m_PressedColor: {r: 0.5773585, g: 0.5773585, b: 0.5773585, a: 1}
+    m_SelectedColor: {r: 0.4113207, g: 0.4113207, b: 0.4113207, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -590,10 +590,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.42075467, g: 1, b: 0.4951533, a: 1}
-    m_HighlightedColor: {r: 0.22985153, g: 0.4792453, b: 0.19441082, a: 1}
-    m_PressedColor: {r: 0.7387729, g: 0.98490566, b: 0.48130295, a: 1}
-    m_SelectedColor: {r: 0.6785725, g: 0.97735846, b: 0.1383053, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.7056604, g: 0.7056604, b: 0.7056604, a: 1}
+    m_PressedColor: {r: 0.6338973, g: 0.645283, b: 0.6221502, a: 1}
+    m_SelectedColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -625,7 +625,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 347197691}
+      - m_Target: {fileID: 656360794}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
         m_Mode: 2
@@ -1865,6 +1865,134 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &656360793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 656360795}
+  - component: {fileID: 656360794}
+  m_Layer: 0
+  m_Name: Timeline AudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &656360794
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656360793}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.481
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &656360795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656360793}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &695599487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,7 +2064,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294966955
-  m_fontColor: {r: 0.6698113, g: 0.99800456, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2282,10 +2410,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 0.8447695, b: 0.41960788, a: 1}
-    m_HighlightedColor: {r: 0.6830188, g: 0.56809705, b: 0.0502598, a: 1}
-    m_PressedColor: {r: 1, g: 0.79342353, b: 0.3679244, a: 1}
-    m_SelectedColor: {r: 1, g: 0.8606092, b: 0.53396225, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.78113204, g: 0.78113204, b: 0.78113204, a: 1}
+    m_PressedColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
+    m_SelectedColor: {r: 0.5018867, g: 0.5018867, b: 0.5018867, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2581,7 +2709,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1492300812}
+  - {fileID: 1034069028}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!320 &934734850
@@ -2610,7 +2740,7 @@ PlayableDirector:
   - key: {fileID: -5685445513507450487, guid: 37e03140d934fd44cb2c935bc86c4668, type: 2}
     value: {fileID: 958801080}
   - key: {fileID: -8416626521606979444, guid: 37e03140d934fd44cb2c935bc86c4668, type: 2}
-    value: {fileID: 347197691}
+    value: {fileID: 656360794}
   - key: {fileID: -25108534703882229, guid: 37e03140d934fd44cb2c935bc86c4668, type: 2}
     value: {fileID: 270463169}
   m_ExposedReferences:
@@ -2959,13 +3089,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034069026}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.49089026, y: 0.33925912, z: -0.21544807, w: 0.77298915}
+  m_LocalRotation: {x: 0.4838595, y: 0.349509, z: -0.21910809, w: 0.77182585}
   m_LocalPosition: {x: 0.010808468, y: 2.8865273, z: 0.7902589}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1056030379}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 934734849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1048907353 stripped
 GameObject:
@@ -3114,6 +3244,7 @@ MonoBehaviour:
   title: {fileID: 2089871342}
   cutScene: {fileID: 934734848}
   menuCam: {fileID: 509393744}
+  audioSource: {fileID: 347197690}
 --- !u!1 &1139335855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 687523742406835317, guid: a501b344e9c01444d9068e1e426ad665,
@@ -3245,10 +3376,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7075472, g: 0.7274627, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.53396225, g: 0.67230016, b: 1, a: 1}
-    m_PressedColor: {r: 0.57169807, g: 0.5921299, b: 1, a: 1}
-    m_SelectedColor: {r: 0.47358483, g: 0.61954725, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
+    m_PressedColor: {r: 0.6377357, g: 0.6377357, b: 0.6377357, a: 1}
+    m_SelectedColor: {r: 0.5169811, g: 0.5169811, b: 0.5169811, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3485,7 +3616,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1249197105}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 934734849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1521864390
 GameObject:
@@ -3649,7 +3780,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4280595455
-  m_fontColor: {r: 1, g: 0.70227796, b: 0.1415093, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7868,6 +7999,5 @@ SceneRoots:
   - {fileID: 1066031894}
   - {fileID: 347197692}
   - {fileID: 934734849}
-  - {fileID: 1492300812}
-  - {fileID: 1034069028}
   - {fileID: 509393746}
+  - {fileID: 656360795}

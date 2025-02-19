@@ -185,9 +185,9 @@ public class Player : MonoBehaviour
 
     void TakeDamage()
     {
-        if (playerRb.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
+        if (playerRb.IsTouchingLayers(LayerMask.GetMask("Hazards")))
         {
-            playerHealth.TakeDamage(1);
+            playerHealth.TakeDamage(5);
         }
     }
 

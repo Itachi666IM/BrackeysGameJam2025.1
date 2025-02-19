@@ -10,8 +10,10 @@ public class MenuManager : MonoBehaviour
     public TMP_Text title;
     public GameObject cutScene;
     public GameObject menuCam;
+    public GameObject audioSource;
     public void Play()
     {
+        audioSource.SetActive(false);
         menuCam.SetActive(false);
         buttons.SetActive(false);
         title.gameObject.SetActive(false);
