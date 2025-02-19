@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
 
     public bool canMove = true;
     public bool isAlive = true;
+    bool canDoubleJump = true;
 
     // Start is called before the first frame update
     void Start()
@@ -92,7 +93,15 @@ public class Player : MonoBehaviour
         }
         if (!playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
-            return;
+            if (!canDoubleJump)
+            { 
+                return;
+            }
+            canDoubleJump = false;
+        }
+        else
+        {
+            canDoubleJump = true;
         }
         if (value.isPressed)
         {
@@ -161,7 +170,10 @@ public class Player : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            if(enemy.tag == "Enemy")
+            {
+                enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            }
         }
         
     }
