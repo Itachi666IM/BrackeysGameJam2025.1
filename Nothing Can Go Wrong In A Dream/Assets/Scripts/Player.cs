@@ -22,11 +22,21 @@ public class Player : MonoBehaviour
     [SerializeField] LayerMask enemyLayer;
     [SerializeField] ParticleSystem slashEffect;
     [SerializeField] float slashDuration;
+    public AudioClip jumpClip;
+    public AudioClip attackClip;
     float nextAttackTime;
+
+    [Header("Player Dash")]
+    private bool canDash = true;
+    private bool isDashing;
+    [SerializeField] float dashAmount;
+    [SerializeField] float dashDuration;
+    [SerializeField] float dashCoolDownTime;
+    [SerializeField] TrailRenderer dashTrail;
 
     Rigidbody2D playerRb;
     BoxCollider2D playerFeetCollider;
-    AudioSource jumpSource;
+    AudioSource audioSource;
     Animator playerAnim;
     Vector2 moveInput;
     PlayerHealth playerHealth;
@@ -41,7 +51,7 @@ public class Player : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
         playerFeetCollider = GetComponent<BoxCollider2D>();
-        jumpSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         playerHealth = FindObjectOfType<PlayerHealth>();
     }
 
@@ -51,6 +61,10 @@ public class Player : MonoBehaviour
         if(canMove)
         {
             if(!isAlive)
+            {
+                return;
+            }
+            if (isDashing)
             {
                 return;
             }
@@ -68,6 +82,10 @@ public class Player : MonoBehaviour
     void OnMove(InputValue input)
     {
         if (!isAlive)
+        {
+            return;
+        }
+        if (isDashing)
         {
             return;
         }
@@ -91,6 +109,10 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        if (isDashing)
+        {
+            return;
+        }
         if (!playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             if (!canDoubleJump)
@@ -106,7 +128,7 @@ public class Player : MonoBehaviour
         if (value.isPressed)
         {
             playerRb.velocity += new Vector2(0f, jumpSpeed);
-            jumpSource.Play();
+            audioSource.PlayOneShot(jumpClip);
             //playerAnim.SetTrigger("JumpTrigger");
         }
     }
@@ -145,6 +167,10 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        if (isDashing)
+        {
+            return;
+        }
 
         if (value.isPressed)
         {
@@ -164,6 +190,7 @@ public class Player : MonoBehaviour
             return;
         }
         playerAnim.SetTrigger("Attack");
+        audioSource.PlayOneShot(attackClip);
         StartCoroutine(SlashEffectManager());
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
@@ -208,5 +235,30 @@ public class Player : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Handles.DrawWireDisc(attackPoint.position, Vector3.forward, attackRange);
+    }
+
+    void OnDash(InputValue value)
+    {
+        if (!isDashing)
+        {
+            StartCoroutine(PlayerDash());
+        }
+    }
+
+    IEnumerator PlayerDash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = playerRb.gravityScale;
+        playerRb.gravityScale = 0f;
+        playerRb.velocity = new Vector2(dashAmount * transform.localScale.x, 0f);
+        dashTrail.emitting = true;
+        yield return new WaitForSeconds(dashDuration);
+        dashTrail.emitting = false;
+        playerRb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashCoolDownTime);
+        canDash = true;
+
     }
 }
