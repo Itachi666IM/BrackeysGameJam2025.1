@@ -25,7 +25,7 @@ public class Boss_Walk : StateMachineBehaviour
         Vector2 newPos = Vector2.MoveTowards(myRigidbody2D.position, target, speed * Time.fixedDeltaTime);
         myRigidbody2D.MovePosition(newPos);
 
-        if(Vector2.Distance(target,myRigidbody2D.position)<= attackRange)
+        if(Vector2.Distance(target,myRigidbody2D.position)<= attackRange && boss.canAttack)
         {
             animator.SetTrigger("Attack");
         }

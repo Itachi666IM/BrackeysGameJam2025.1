@@ -6,7 +6,7 @@ public class Destroyer : MonoBehaviour
 {
     void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 1.5f);
     }
     
 }

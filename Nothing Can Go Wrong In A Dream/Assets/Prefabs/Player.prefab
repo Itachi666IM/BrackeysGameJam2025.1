@@ -173,7 +173,7 @@ MonoBehaviour:
   isHeaven: 0
   minY: -5
   maxY: 5
-  attackRange: 0.8
+  attackRange: 1.4
   timeBetweenAttacks: 0.5
   attackDamage: 50
   attackPoint: {fileID: 5298647183414289887}
@@ -555,6 +555,16 @@ PrefabInstance:
         type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360655870356088561, guid: 57a776ff377f3c44e8403e2067a4d41f,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360655870356088561, guid: 57a776ff377f3c44e8403e2067a4d41f,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 313047863
       objectReference: {fileID: 0}
     - target: {fileID: 2360655870356088561, guid: 57a776ff377f3c44e8403e2067a4d41f,
         type: 3}
