@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [Header("Player Attack")]
     [SerializeField] float attackRange;
     [SerializeField] float timeBetweenAttacks;
-    [SerializeField] float attackDamage;
+    [SerializeField] int attackDamage;
     [SerializeField] Transform attackPoint;
     [SerializeField] LayerMask enemyLayer;
     [SerializeField] ParticleSystem slashEffect;
@@ -200,6 +200,11 @@ public class Player : MonoBehaviour
             if(enemy.tag == "Enemy")
             {
                 enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            }
+
+            if(enemy.tag == "Boss1")
+            {
+                enemy.GetComponent<Boss1>().TakeDamage(attackDamage);
             }
         }
         
