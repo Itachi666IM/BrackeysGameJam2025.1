@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
-    [SerializeField] float enemyHealth;
+    [SerializeField] int enemyHealth;
     Rigidbody2D enemyRb;
     Animator enemyAnim;
     
@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
         transform.localScale = new Vector2((Mathf.Sign(enemyRb.velocity.x)), 1f);
     }
 
-    public void TakeDamage(float damageAmount)
+    public void TakeDamage(int damageAmount)
     {
         enemyHealth -= damageAmount;
         if(enemyHealth > 0)

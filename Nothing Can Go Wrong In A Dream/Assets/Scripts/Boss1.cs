@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss1 : MonoBehaviour
 {
-    public int health;
     public GameObject fireBall;
     public GameObject iceSpell;
     public Transform shotPoint;
+
+    [Header("Boss Health")]
+    public int health;
+    public Slider healthBar;
+    public int minHealth;
+    public int maxHealth;
 
     Transform player;
 
@@ -16,6 +22,8 @@ public class Boss1 : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<Player>().transform;
+        healthBar.maxValue = maxHealth;
+        healthBar.minValue = minHealth;
     }
 
     public void LookAtPlayer()
@@ -40,7 +48,7 @@ public class Boss1 : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
-        if(health<0)
+        if(health<=0)
         {
             Die();
         }
@@ -59,5 +67,14 @@ public class Boss1 : MonoBehaviour
     public void ShootIceSpell()
     {
         Instantiate(iceSpell, shotPoint.position, shotPoint.rotation);
+    }
+
+    private void Update()
+    {
+        healthBar.value = health;
+        if(health<0)
+        {
+            healthBar.value = minHealth;
+        }
     }
 }
