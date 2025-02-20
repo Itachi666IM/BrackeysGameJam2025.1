@@ -244,6 +244,10 @@ public class Player : MonoBehaviour
 
     void OnDash(InputValue value)
     {
+        if (isHeaven)
+        {
+            return;
+        }
         if (!isDashing)
         {
             StartCoroutine(PlayerDash());
