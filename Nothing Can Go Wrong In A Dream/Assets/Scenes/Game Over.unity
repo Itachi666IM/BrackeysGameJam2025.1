@@ -532,9 +532,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Just a dream, huh?
+  m_text: 'What a nightmare!
 
-    Wish it was real...'
+    Glad it was a dream...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0edb51905c059ba4488df94d28378969, type: 2}
   m_sharedMaterial: {fileID: -2272181853035195193, guid: 0edb51905c059ba4488df94d28378969,
@@ -544,8 +544,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278190283
+  m_fontColor: {r: 0.79622644, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.82641506, g: 0.81193465, b: 0.59096473, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1504,7 +1504,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4281193797
   m_fontColor: {r: 0.27102122, g: 0.83396226, b: 0.17466003, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1879,7 +1879,7 @@ GameObject:
   - component: {fileID: 934734849}
   - component: {fileID: 934734850}
   m_Layer: 0
-  m_Name: Final Scene Timeline
+  m_Name: Game Over Timeline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1931,9 +1931,12 @@ PlayableDirector:
     value: {fileID: 492218750}
   m_ExposedReferences:
     m_References:
+    - d83d96d920fab2a40a351b09537fe675: {fileID: 1492300811}
     - 491635c723710b04b838b7fe96c871cf: {fileID: 1492300811}
     - 7eea923ea6d77ea42b336fd95c68e5a7: {fileID: 1034069027}
     - e1f221fbc6655e34b8063452dbbc8039: {fileID: 1492300811}
+    - 0ecf393bd04618243a5f6578f3e14a70: {fileID: 1034069027}
+    - 17a4a22e62588644ca2ee9cf457a851b: {fileID: 1492300811}
     - d49e3da6211f8be42ac258af3c9c4151: {fileID: 1034069027}
 --- !u!1001 &948442534
 PrefabInstance:
@@ -2287,7 +2290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034069026}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.48371568, y: 0.34991997, z: -0.21934704, w: 0.77166194}
+  m_LocalRotation: {x: 0.49092296, y: 0.33921745, z: -0.2154357, w: 0.7729901}
   m_LocalPosition: {x: 0.010808468, y: 2.8865273, z: 0.7902589}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2577,7 +2580,7 @@ GameObject:
   - component: {fileID: 1656766527}
   - component: {fileID: 1656766528}
   m_Layer: 0
-  m_Name: Final Scene Manager
+  m_Name: Game Over Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6406,7 +6409,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.6784314, g: 1, b: 0.73843527, a: 0}
+  m_BackGroundColor: {r: 1, g: 0.72515243, b: 0.6784314, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

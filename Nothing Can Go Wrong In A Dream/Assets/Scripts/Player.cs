@@ -223,9 +223,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void ReloadScene()
+    public void EndScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Game Over");
         playerHealth.health = 5;
     }
    
