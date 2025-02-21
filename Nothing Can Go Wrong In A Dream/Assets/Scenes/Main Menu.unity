@@ -2053,7 +2053,7 @@ MonoBehaviour:
   m_text: 'Navigate your way through your dreams -
 
     Use W,A,S,D or Arrow keys
-    to move and space to jump'
+    to move and space to jump. Press Z to dash and Left Mouse Button to attack.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0edb51905c059ba4488df94d28378969, type: 2}
   m_sharedMaterial: {fileID: -2272181853035195193, guid: 0edb51905c059ba4488df94d28378969,
