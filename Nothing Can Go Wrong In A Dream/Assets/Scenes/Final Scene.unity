@@ -532,9 +532,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Just a dream, huh?
+  m_text: 'What a crazy dream!
 
-    Wish it was real...'
+    Nothing went wrong though..'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0edb51905c059ba4488df94d28378969, type: 2}
   m_sharedMaterial: {fileID: -2272181853035195193, guid: 0edb51905c059ba4488df94d28378969,
@@ -544,8 +544,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1017,7 +1017,7 @@ RectTransform:
   m_GameObject: {fileID: 492218750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0283, y: 1.0283, z: 1.0283}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 265186696}
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.23312679, g: 0.381132, b: 0.22076891, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1505,7 +1505,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.27102122, g: 0.83396226, b: 0.17466003, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1593,10 +1593,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.49715203, g: 0.6603774, b: 0.5130764, a: 1}
-    m_HighlightedColor: {r: 0.28490567, g: 1, b: 0.28490567, a: 1}
-    m_PressedColor: {r: 0, g: 0.6301887, b: 0.06665002, a: 1}
-    m_SelectedColor: {r: 0.263624, g: 0.4566037, b: 0.23347092, a: 1}
+    m_NormalColor: {r: 1, g: 0.7371156, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.690566, g: 0.4971949, b: 0.035179723, a: 1}
+    m_PressedColor: {r: 0.7584905, g: 0.6175054, b: 0.3248629, a: 1}
+    m_SelectedColor: {r: 0.8792453, g: 0.7416836, b: 0.4163972, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2287,7 +2287,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034069026}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.48371568, y: 0.34991997, z: -0.21934704, w: 0.77166194}
+  m_LocalRotation: {x: 0.49092296, y: 0.33921742, z: -0.21543562, w: 0.77299017}
   m_LocalPosition: {x: 0.010808468, y: 2.8865273, z: 0.7902589}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5093,14 +5093,7 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig9:LeftHandRing3'\n\tTransform 'mixamorig9:RightHandRing1'\n\tTransform
-    'mixamorig9:LeftHandPinky3'\n\tTransform 'mixamorig9:LeftHandIndex2'\n\tTransform
-    'mixamorig9:RightHandThumb2'\n\tTransform 'mixamorig9:LeftForeArm'\n\tTransform
-    'mixamorig9:LeftFoot'\n\tTransform 'mixamorig9:RightHandThumb3'\n\tTransform
-    'mixamorig9:RightHandPinky1'\n\tTransform 'mixamorig9:RightHandMiddle1'\n\tand
-    more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0

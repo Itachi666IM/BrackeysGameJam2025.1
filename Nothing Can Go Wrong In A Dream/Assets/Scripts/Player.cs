@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -235,11 +234,6 @@ public class Player : MonoBehaviour
         slashEffect.Play();
         yield return new WaitForSeconds(slashDuration);
         slashEffect.Stop();
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Handles.DrawWireDisc(attackPoint.position, Vector3.forward, attackRange);
     }
 
     void OnDash(InputValue value)
