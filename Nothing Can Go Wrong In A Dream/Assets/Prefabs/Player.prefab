@@ -184,8 +184,8 @@ MonoBehaviour:
   slashDuration: 0.1
   jumpClip: {fileID: 8300000, guid: 54c676e86ed3bf844a3b0a4736291d1d, type: 3}
   attackClip: {fileID: 8300000, guid: efed3340c6ef6f543ae0ab90b7f9256e, type: 3}
-  dashAmount: 10
-  dashDuration: 1
+  dashAmount: 12
+  dashDuration: 0.3
   dashCoolDownTime: 0.5
   dashTrail: {fileID: 2003654221736941248}
   canMove: 1
